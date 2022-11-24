@@ -1,0 +1,18 @@
+{
+  "estudantes": [
+    {
+      "imagem": "",
+      "cpf": "aaaa",
+      "nome": "aaaaaa",
+      "email": "aaaaaaaa",
+      "telefone": "aaaaaaa",
+      "endereco": "aaaaaa",
+      "bairro": "aaaaaaaa",
+      "dataNascimento": "aaaaaaa",
+      "nivelEscolaridade": "Ensino Fundamental",
+      "instituicao": "Sim",
+      "motivoMatricula": "aaaaaa",
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+<div class="container">
+  <div class="text-center" style="color: #fec92e">
+    <h1>Cadastro de Estudante</h1>
+  </div>
+
+  <!-- Form -->
+  <form
+    [formGroup]="formCadastro"
+    id="idFormCadastro"
+    (submit)="cadastrarEstudante()"
+    enctype="multipart/form-data"
+    class="row g-3"
+  >
+    <!-- <div class="text-center">
+      <img
+        id="outputImagem"
+        src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png"
+        class="img img-responsive"
+        width="300"
+      />
+    </div>
+
+    <div class="text-center">
+      <input
+        type="file"
+        class="btn-check"
+        id="idImagem"
+        formControlName="imagem"
+        onchange="previewImagem(event)"
+        accept=".png, .jpg, .jpeg"
+      />
+      <label class="btn btn-outline-warning" style="color: black" for="idImagem"
+        >Adicionar Imagem</label
+      >
+    </div> -->
+
+    <div class="col-12">
+      <label style="color: #fec92e" for="idCpf" class="form-label">CPF</label>
+      <input
+        type="text"
+        class="form-control"
+        id="idCpf"
+        formControlName="cpf"
+        placeholder="CPF"
+        maxlength="14"
+        size="12"
+        placeholder="CPF"
+      />
+    </div>
+
+    <div class="col-12">
+      <label style="color: #fec92e" for="idNome" class="form-label">Nome</label>
+      <input
+        type="text"
+        class="form-control"
+        id="idNome"
+        formControlName="nome"
+        placeholder="Nome Completo"
+      />
+    </div>
+
+    <div class="col-md-6">
+      <label style="color: #fec92e" for="idEmail" class="form-label"
+        >E-mail</label
+      >
+      <input
+        type="email"
+        class="form-control"
+        id="idEmail"
+        formControlName="email"
+        placeholder="E-mail"
+      />
+    </div>
+
+    <div class="col-md-6">
+      <label style="color: #fec92e" for="idTelefone" class="form-label"
+        >Telefone</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="idTelefone"
+        formControlName="telefone"
+        size="9"
+        maxlength="13"
+      />
+    </div>
+
+    <div class="col-12">
+      <label style="color: #fec92e" for="idEndereco" class="form-label"
+        >Endereço</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="idEndereco"
+        formControlName="endereco"
+        placeholder="Endereço"
+      />
+    </div>
+
+    <div class="col-md-6">
+      <label style="color: #fec92e" for="idBairro" class="form-label"
+        >Bairro</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="idBairro"
+        formControlName="bairro"
+        placeholder="Bairro"
+      />
+    </div>
+
+    <div class="col-md-6">
+      <label style="color: #fec92e" for="idDataNascimento" class="form-label"
+        >Data de Nascimento</label
+      >
+      <input
+        type="text"
+        class="form-control"
+        id="idDataNascimento"
+        formControlName="dataNascimento"
+        maxlength="10"
+        size="8"
+      />
+    </div>
+
+    <div class="col-md-6">
+      <label style="color: #fec92e" for="idNivelEscolaridade" class="form-label"
+        >Nivel de Escolaridade</label
+      >
+      <select
+        id="idNivelEscolaridade"
+        formControlName="nivelEscolaridade"
+        class="form-select"
+      >
+        <option disabled value="" selected>Escolha uma opção</option>
+        <option value="Ensino Fundamental">Ensino Fundamental</option>
+        <option value="Ensino Medio">Ensino Medio</option>
+        <option value="Ensino Superior">Ensino Superior</option>
+      </select>
+    </div>
+
+    <div class="col-md-6">
+      <label style="color: #fec92e" for="idInstituicao" class="form-label"
+        >Estuda em outra instituição atualmente</label
+      >
+      <select
+        id="idInstituicao"
+        formControlName="instituicao"
+        class="form-select"
+      >
+        <option disabled value="" selected>Escolha uma opção</option>
+        <option value="Não">Não</option>
+        <option value="Sim">Sim</option>
+      </select>
+    </div>
+
+    <div class="col-12">
+      <label style="color: #fec92e" for="idMotivoMatricula" class="form-label"
+        >Por qual motivo você escolheu se matricular em um curso do Senac
+        RJ?</label
+      >
+      <textarea
+        id="idMotivoMatricula"
+        class="form-control"
+        formControlName="motivoMatricula"
+        placeholder="Informe o motivo"
+      ></textarea>
+    </div>
+  </form>
+  <!-- End Form -->
+  <div class="col-12 text-center mb-3 mt-4">
+    <button
+      type="submit"
+      form="idFormCadastro"
+      class="btn btn-outline-success"
+      style="color: black"
+      [disabled]="!formCadastro.valid"
+    >
+      Salvar Cadastro
+    </button>
+  </div>
+</div>
